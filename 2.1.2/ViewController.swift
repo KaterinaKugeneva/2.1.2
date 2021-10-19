@@ -20,11 +20,12 @@ class ViewController: UIViewController {
         greenLight.layer.cornerRadius = 75
     }
    
+   
     @IBAction func pressStartButton() {
         state += 1
         startButton.setTitle("NEXT", for: .normal)
         switch state {
-        case 1: do { 
+        case 1: do {
             redLight.alpha = 1
             yellowLight.alpha = 0.3
             greenLight.alpha = 0.3

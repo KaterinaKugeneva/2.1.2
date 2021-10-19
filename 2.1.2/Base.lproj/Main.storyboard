@@ -16,34 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uyh-BB-oPU">
-                                <rect key="frame" x="132" y="113" width="150" height="466"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OGt-Oy-tGz">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="OGt-Oy-tGz" secondAttribute="height" multiplier="1:1" id="Y8p-pG-7oB"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7EE-SJ-qYs">
-                                        <rect key="frame" x="0.0" y="158" width="150" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="7EE-SJ-qYs" secondAttribute="height" multiplier="1:1" id="rWC-yf-TxJ"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MXe-ec-1Bp">
-                                        <rect key="frame" x="0.0" y="316" width="150" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="MXe-ec-1Bp" secondAttribute="height" multiplier="1:1" id="VYF-ux-c4K"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzB-27-2e4">
-                                <rect key="frame" x="120" y="781" width="174" height="41"/>
+                                <rect key="frame" x="120" y="729" width="174" height="93"/>
                                 <color key="backgroundColor" cyan="0.38" magenta="0.311398387" yellow="0.28108578919999999" black="0.62017617449999995" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="g2g-W1-MYJ"/>
@@ -57,12 +31,42 @@
                                     <action selector="pressStartButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEd-Td-Iyd"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyh-BB-oPU">
+                                <rect key="frame" x="135.5" y="115" width="143" height="464"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGt-Oy-tGz">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="143.5"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="OGt-Oy-tGz" secondAttribute="height" multiplier="1:1" id="Y8p-pG-7oB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7EE-SJ-qYs">
+                                        <rect key="frame" x="0.0" y="160.5" width="143" height="143"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7EE-SJ-qYs" secondAttribute="height" multiplier="1:1" id="rWC-yf-TxJ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXe-ec-1Bp">
+                                        <rect key="frame" x="0.0" y="320.5" width="143" height="143.5"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MXe-ec-1Bp" secondAttribute="height" multiplier="1:1" id="VYF-ux-c4K"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="uyh-BB-oPU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="2cl-bn-0wH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uyh-BB-oPU" secondAttribute="bottom" constant="283" id="501-qJ-edD"/>
                             <constraint firstItem="jzB-27-2e4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8S9-3c-ODv"/>
+                            <constraint firstItem="jzB-27-2e4" firstAttribute="top" secondItem="uyh-BB-oPU" secondAttribute="bottom" constant="150" id="NdR-wf-wff"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jzB-27-2e4" secondAttribute="bottom" constant="40" id="ii7-gn-KZf"/>
+                            <constraint firstItem="uyh-BB-oPU" firstAttribute="centerX" secondItem="jzB-27-2e4" secondAttribute="centerX" id="yaY-E3-JAm"/>
                         </constraints>
                     </view>
                     <connections>
