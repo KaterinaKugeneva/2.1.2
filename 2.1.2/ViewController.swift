@@ -19,7 +19,10 @@ class ViewController: UIViewController {
         //yellowLight.layer.cornerRadius = redLight.frame.width / 2
         //greenLight.layer.cornerRadius = redLight.frame.width / 2
     }
-    override func viewWillLayoutSubviews() {
+    override func viewDidAppear( _ animated: Bool) {
+            redLight.alpha = 0.3
+            yellowLight.alpha = 0.3
+            greenLight.alpha = 0.3
             redLight.layer.cornerRadius = redLight.frame.width / 2
             yellowLight.layer.cornerRadius = yellowLight.frame.width / 2
             greenLight.layer.cornerRadius = greenLight.frame.width / 2
