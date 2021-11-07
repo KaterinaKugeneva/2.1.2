@@ -136,25 +136,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                        <connections>
-                                            <action selector="changeColor:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="sc8-s3-MrE"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mrz-xC-V9G">
                                         <rect key="frame" x="0.0" y="42" width="55" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                        <connections>
-                                            <action selector="changeColor:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="7jR-8D-4zz"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2lg-Lr-4oG">
                                         <rect key="frame" x="0.0" y="84" width="55" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                        <connections>
-                                            <action selector="changeColor:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Y33-ix-WBP"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -181,7 +172,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="rQT-rZ-xvH">
                             <connections>
-                                <action selector="saveButtonPressed:" destination="BYZ-38-t0r" id="PEV-xz-52P"/>
+                                <action selector="saveButtonPressed:" destination="BYZ-38-t0r" id="ObV-Ww-moe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var colorView: UIView!
     
@@ -25,6 +25,10 @@ class ViewController: UIViewController {
         colorView.layer.cornerRadius = 15
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
+        
+        redField.delegate = self
+        greenField.delegate = self
+        blueField.delegate = self
     
         colorView.backgroundColor = backGroundColor
         if let myColorComponents = backGroundColor.components {
@@ -69,8 +73,12 @@ class ViewController: UIViewController {
                 
         
     }
-    
-    @IBAction func changeColor(_ sender: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if Double(textField.text!)! < 0 || Double(textField.text!)! > 1 {
+            showAlert(tittle: "Error", message: "Wrong input values")
+        } else
+        {
+        
         redSlider.value = (redField.text! as NSString).floatValue
         greenSlider.value = (greenField.text! as NSString).floatValue
         blueSlider.value = (blueField.text! as NSString).floatValue
@@ -85,11 +93,23 @@ class ViewController: UIViewController {
             blue: CGFloat(blueSlider.value),
             alpha: 1
         )
-        
+        }
+       
     }
+    
 
+   /* if  textUsername.text  != username || textPassword.text != password {
+                showAlert(tittle: "Error", message: "Wrong username or password")
+            } else{
+                self.performSegue(withIdentifier: "segueFromAtoB", sender: self)
+            }
+        }
+    
+    */
+    
     
     @IBAction func saveButtonPressed(_ sender: Any) {
+        
         delegate?.setColor(colorView.backgroundColor!)
         dismiss(animated: true)
     }
@@ -100,4 +120,12 @@ extension UIColor {
         return getRed(&r, green: &g, blue: &b, alpha: &a) ? (r,g,b,a) : nil
     }
 }
-
+extension ViewController {
+    func showAlert (tittle: String, message:String) {
+        let alert = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present (alert , animated: true )
+        
+    }
+}
