@@ -74,7 +74,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if Double(textField.text!)! < 0 || Double(textField.text!)! > 1 {
+        guard let newValue = textField.text else { return }
+        guard let numberValue = Double(newValue) else {
+            textField.text = "0"
+            return }
+        if Double(textField.text!)! < 0 || Double(textField.text!)! < 0 {
             showAlert(tittle: "Error", message: "Wrong input values")
         } else
         {
